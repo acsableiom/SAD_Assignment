@@ -1,0 +1,43 @@
+- var software = [{ id:'001', firstname:'Brenda', lastname:'Cox', present: false},{ id:'002', firstname:'Greg', lastname:'Davis', present: false}]
+html
+  head
+    title!= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1 !{message}
+    table(border='1')
+      thead
+         th ID
+         th First Name
+         th Last Name
+         th Present?
+      tbody
+        each student in software
+          tr
+            td #{student.id}
+            td #{student.firstname}
+            td #{student.lastname}
+            td #{student.present}
+
+            h1 Enter the details of a new pet
+        form(action="/courses/software" method="POST")
+        table(border='1')
+        thead
+            th ID
+            th FirstName
+            th LastName
+            th Present?
+        tbody
+            td
+            input(type="text", name="id")
+            td
+            input(type="text", name="firstname")
+            td
+            input(type="text", name="lastname")
+            td
+            input(type="text", name="present")
+            tr
+            td
+            button(type="submit") Submit
+
+
