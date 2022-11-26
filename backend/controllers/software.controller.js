@@ -71,7 +71,7 @@ exports.findAll = (req, res) => {
       .find(condition)
       .then(data => {
          res.render('software',
-             {title: 'Courses',
+             {title: 'Software Course',
               software: data});
       })
       .catch(err => {
