@@ -88,7 +88,6 @@ function App() {
                 <td><button id="ChanBtn" className="btn btn-info btn-lg" onClick={ChanBtn} /></td>
               </tr>
             </tbody>
-
           </table>
         </div>
       </section>
