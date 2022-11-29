@@ -6,7 +6,7 @@ module.exports = mongoose => {
           id: String,
           firstname: String,
           lastname: String,
-          present: Boolean,
+          present: String
         }
       )
     );
