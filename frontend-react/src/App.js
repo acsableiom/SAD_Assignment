@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import SoftwareFunction from './SoftwareFunction';
+import SoftwareClass from './SoftwareClass';
 
 
 function ChanBtn() {
@@ -89,6 +91,7 @@ function App() {
               </tr>
             </tbody>
           </table>
+          <SoftwareClass />
         </div>
       </section>
     </div>
