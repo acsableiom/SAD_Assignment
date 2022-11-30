@@ -1,5 +1,8 @@
 import './App.css';
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import SoftwareFunction from './SoftwareFunction';
+import SoftwareClass from './SoftwareClass';
 import Home from './pages/Home';
 import Navbar from './Navbar';
 import Course from './pages/Course';

@@ -4,14 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-// Adding extra modules
+//Adding extra modules
 var bodyParser = require("body-parser");
 var cors = require('cors');
 
+//routers
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-// The router for software
-var softwareRouter = require('./routes/software.routes');
+var studentsRouter = require('./routes/students.routes');
+var coursesRouter = require('./routes/courses.routes');
 
 var app = express();
 
@@ -29,11 +29,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/courses', softwareRouter);
+app.use('/users', studentsRouter);
+app.use('/courses', coursesRouter);
 
 //Database connection code
 const db = require("./models");
+const {} = require('./controllers/students.controller');
 db.mongoose.connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -60,4 +61,6 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
  
+//console.log(listStudent);
+
 module.exports = app;

@@ -1,15 +1,14 @@
 module.exports = mongoose => {
-    var Software = mongoose.model(
-      "software",
+    var Students = mongoose.model(
+      "students",
       mongoose.Schema(
         {
-          id: String,
+          id: Number,
           firstname: String,
           lastname: String,
           present: Boolean,
         }
       )
     );
-      return Software;
+      return Students;
    };
-   
