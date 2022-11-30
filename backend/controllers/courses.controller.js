@@ -26,7 +26,9 @@ const updateCourse = (req, res)=>
 
 const deleteCourse = (req, res)=>
 {
-
+    coursesModel.findByIdAndDelete(req.params.id)
+    .then(() => res.json("course " + req.params.id + " deleted from database."))
+    .catch(err => res.status(400).json('error ' + err));
 }
 
 module.exports = {listCourse, findCourse, addCourse, updateCourse, deleteCourse}
