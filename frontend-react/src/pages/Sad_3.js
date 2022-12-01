@@ -1,7 +1,10 @@
 import ChanBtn from './ChanBtn.jsx'
+//import SoftwareFunction from './SoftwareFunction';
+import SoftwareClass from '../SoftwareClass';
 
 export default function Home() {
 
+  console.log(SoftwareClass);
   return <section>
     <div id="container">
       <h1>3rd Year - Software Engineering</h1>
@@ -29,9 +32,11 @@ export default function Home() {
           </tr>
         </tbody>
       </table>
+      <SoftwareClass />
     </div>
   </section>
 }
+
 
 
 
